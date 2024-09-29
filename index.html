@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page Clone</title>
+    <link rel="stylesheet" href="web.css">
+    
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+    <script>
+        function signin(event) {
+            event.preventDefault(); // Prevent form from submitting
+
+            const username = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            if (password === "dDViAhXpeJki" && username ==="singhanimesh812@gmail.com") {
+                window.location.href = "viewPage.html"; // Redirect if the password is correct
+            } else {
+                alert("Invalid Username/Password"); // Alert if the password is incorrect
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <div class="login-container">
+        <!-- Left: Login Form -->
+        <div class="login-form">
+            <h2>User Login</h2>
+            <form id="loginForm">
+                <div class="e">
+                    <p class="c" ><i>Email</i></p>
+                    <input type="text" name="username" id="email" placeholder="Enter Username" required>
+                </div>
+                <div class="e">
+                    <p class="c"><i>Password</i></p>
+                    <input type="password" name="password" id="password" placeholder="Enter Password" required>
+                </div>
+                <div class="recaptcha">
+                    <div class="g-recaptcha" data-sitekey="your-site-key"></div> <!-- Replace with your reCAPTCHA site key -->
+                </div>
+                <button type="submit" onclick="signin(event)">SIGN IN</button>
+            </form>
+        </div>
+
+        <!-- Right: Sidebar for Forgot Password -->
+        <div class="sidebar">
+            <h2 id="frist">If Forgot?</h2>
+            <h2 id="second">Password Request</h2>
+            <div id="last">
+                <a href="#">Click Here</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
